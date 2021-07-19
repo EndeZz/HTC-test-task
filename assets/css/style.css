@@ -78,11 +78,13 @@ a {
 }
 .nav__title {
   padding: 6px 1px 6px 12px;
-  font-size: 24px;
+  font-style: normal;
   font-weight: 500;
+  font-size: 20px;
   line-height: 24px;
 }
 .nav__input {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
   padding: 6px 0;
   border: 0;
   border-bottom: 1px solid #333333;
@@ -92,12 +94,100 @@ a {
   margin-right: 32px;
 }
 
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+.news__card {
+  position: relative;
+  width: 280px;
+  height: 370px;
+  cursor: pointer;
+}
+.news__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+.news__img {
+  border-radius: 8px;
+}
+.news__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 140%;
+  padding: 16px;
+  color: #ffffff;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.news__content:hover {
+  opacity: 1;
+}
+.news__name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .button {
   border: none;
   background: 0;
   cursor: pointer;
   outline: none;
   position: relative;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+}
+.button__tabs {
+  border: none;
+  color: #e5261e;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  color: #333333;
+  margin: 0 12.5px;
+}
+.button__tabs_active {
+  color: #e5261e;
+  border-bottom: 2px solid #e5261e;
 }
 
 .nav__button {
@@ -108,15 +198,21 @@ a {
   font-family: "Rubik", Arial, Helvetica, sans-serif;
   color: #e5261e;
 }
+.nav__button:hover {
+  color: #cc221b;
+}
 
 .nav__sign-in {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  border: 2px solid #e5261e;
+  border: 0 solid #e5261e;
   border-radius: 4px;
   color: #ffffff;
   background: #e5261e;
   padding: 9px 32px;
+}
+.nav__sign-in:hover {
+  background-color: #cc221b;
 }
