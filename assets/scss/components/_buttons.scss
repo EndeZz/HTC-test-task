@@ -1,23 +1,51 @@
 .button {
   border: none;
   background: 0;
-
   cursor: pointer;
   outline: none;
   position: relative;
+  font-family: $font;
+  transition: background-color 0.2s ease-in-out;
+  @include font_config(normal, 500, 28px, 33px);
+
+  &__tabs {
+    border: none;
+    color: $color-red;
+    background: none;
+
+    cursor: pointer;
+    outline: none;
+    position: relative;
+
+    color: $color-gray;
+    margin: 0 12.5px;
+  }
+
+  &__tabs_active {
+    color: $color-red;
+    border-bottom: 2px solid $color-red;
+  }
 }
 
 .nav__button {
   @include font_config(normal, 500, $font-size-16, 19px);
   font-family: $font;
   color: $color-red;
+
+  &:hover {
+    color: $color-red-second;
+  }
 }
 
 .nav__sign-in {
   @include font_config(normal, 500, $font-size-16, 19px);
-  border: 2px solid $color-red;
+  border: 0 solid $color-red;
   border-radius: 4px;
   color: $color-light;
   background: $color-red;
   padding: 9px 32px;
+
+  &:hover {
+    background-color: $color-red-second;
+  }
 }
