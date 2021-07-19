@@ -1,0 +1,23 @@
+.button {
+  border: none;
+  background: 0;
+
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.nav__button {
+  @include font_config(normal, 500, $font-size-16, 19px);
+  font-family: $font;
+  color: $color-red;
+}
+
+.nav__sign-in {
+  @include font_config(normal, 500, $font-size-16, 19px);
+  border: 2px solid $color-red;
+  border-radius: 4px;
+  color: $color-light;
+  background: $color-red;
+  padding: 9px 32px;
+}
