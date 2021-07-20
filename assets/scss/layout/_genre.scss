@@ -59,7 +59,7 @@
   }
 
   &__name {
-    @include font_config(normal, normal, 20px, 24px);
+    @include font_config(normal, 400, 20px, 24px);
     color: $color-light;
   }
 }
