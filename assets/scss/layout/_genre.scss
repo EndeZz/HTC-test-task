@@ -1,5 +1,6 @@
 .genre {
   margin-top: 32px;
+  margin-bottom: 72px;
 
   &__title {
     @include font_config(normal, 500, 24px, 28px);
