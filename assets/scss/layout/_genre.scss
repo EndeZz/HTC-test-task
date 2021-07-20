@@ -1,0 +1,65 @@
+.genre {
+  margin-top: 32px;
+
+  &__title {
+    @include font_config(normal, 500, 24px, 28px);
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: flex;
+    // flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 16px rgba(15, 6, 6, 0.15);
+    border-radius: 6px;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+    width: 280px;
+    height: 208px;
+    margin-right: 20px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(5n + 1) {
+      background: linear-gradient(127.83deg, #f2c94c 8.44%, #f29a4a 91.36%);
+    }
+
+    &:nth-child(5n + 2) {
+      background: linear-gradient(127.83deg, #f2994a 8.44%, #eb5757 91.36%);
+    }
+
+    &:nth-child(5n + 3) {
+      background: linear-gradient(127.83deg, #56ccf2 8.44%, #2f80ed 91.36%);
+    }
+
+    &:nth-child(5n + 4) {
+      background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__emoji {
+    padding: 1.6rem;
+    font-size: 2.4rem;
+  }
+
+  &__name {
+    @include font_config(normal, normal, 20px, 24px);
+    color: $color-light;
+  }
+}
