@@ -20,7 +20,8 @@
     align-content: space-between;
   }
 
-  &__img {
+  &__img,
+  &__content {
     border-radius: 8px;
   }
 
@@ -28,6 +29,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: $z-tooltip;
     width: 100%;
     height: 100%;
     line-height: 140%;
@@ -35,9 +37,10 @@
     color: $color-light;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+    background: $color-gray;
 
     &:hover {
-      opacity: 1;
+      opacity: 0.8;
     }
   }
 
