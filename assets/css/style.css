@@ -101,9 +101,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .news {
@@ -156,6 +156,7 @@ a {
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
   background: #333333;
+  overflow: auto;
 }
 .news__content:hover {
   opacity: 0.8;
@@ -322,6 +323,7 @@ a {
 .button__tabs_active {
   color: #e5261e;
   border-bottom: 2px solid #e5261e;
+  padding-bottom: 6px;
 }
 
 .nav__button {
@@ -357,4 +359,13 @@ a {
   font-size: 24px;
   line-height: 28px;
   margin-bottom: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f2f2f2;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  border-radius: 2px;
 }
