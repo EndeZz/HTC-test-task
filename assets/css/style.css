@@ -37,7 +37,7 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
   max-width: 1200px;
 }
 
@@ -162,6 +162,7 @@ a {
 
 .genre {
   margin-top: 32px;
+  margin-bottom: 72px;
 }
 .genre__title {
   font-style: normal;
@@ -221,8 +222,8 @@ a {
   opacity: 1;
 }
 .genre__emoji {
-  padding: 1.6rem;
-  font-size: 2.4rem;
+  padding: 32px;
+  font-size: 48px;
 }
 .genre__name {
   font-style: normal;
@@ -240,7 +241,8 @@ a {
   background-color: #f2f2f2;
 }
 .footer__container {
-  padding: 28px 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
