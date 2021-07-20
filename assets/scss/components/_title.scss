@@ -1,0 +1,4 @@
+.title {
+  @include font_config(normal, 500, 24px, 28px);
+  margin-bottom: 16px;
+}
