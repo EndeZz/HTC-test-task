@@ -6,11 +6,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 32px;
+  padding-bottom: 44px;
+
+  &__search {
+    display: flex;
+    justify-content: space-between;
+    width: 402px;
+  }
 
   &__logo {
     display: flex;
     align-items: center;
-    padding: 32px 0;
+    margin-bottom: 4px;
   }
 
   &__title {
@@ -19,6 +27,7 @@
   }
 
   &__input {
+    @include font_config(normal, 400, $font-size-16, 19px);
     font-family: $font;
     padding: 6px 0;
     border: 0;
@@ -26,6 +35,5 @@
     outline: none;
     line-height: 19px;
     width: 320px;
-    margin-right: 32px;
   }
 }
