@@ -44,6 +44,7 @@
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
     background: $color-gray;
+    overflow: auto;
 
     &:hover {
       opacity: 0.8;
@@ -53,5 +54,22 @@
   &__name {
     @include font_config(normal, normal, 20px, 24px);
     margin-top: 16px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: $color-gray-second;
+    border-radius: 0 10px 10px 0;
+
+    &-thumb {
+      background-color: $scroll-bar-color;
+      border: 2px solid $color-gray-second;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: $color-gray;
+      }
+    }
   }
 }
