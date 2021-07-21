@@ -20,7 +20,7 @@
           <input type="text" class="nav__input" placeholder="Поиск..." />
           <button class="button nav__button">Найти</button>
         </div>
-        <button class="button nav__sign-in">Войти</button>
+        <button class="button nav__sign-in" id="btn_sign-in">Войти</button>
       </nav>
     </header>
     <main class="main">
@@ -307,6 +307,25 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" id="modal">
+      <div class="modal__bg"></div>
+      <div class="modal__body">
+        <div class="modal__content">
+          <h2 class="modal__title">Вход</h2>
+          <form action="#" class="modal__form">
+            <input type="text" placeholder="Логин" class="modal__input" />
+            <input type="password" placeholder="Пароль" class="modal__input" />
+            <label for="auth-remember" class="modal__label">
+              <input type="checkbox" name="Запомнить" id="auth-remember" class="modal__remember" />
+              <span class="modal__checkbox"></span>
+              Запомнить
+            </label>
+          </form>
+          <button class="button nav__sign-in" id="btn_sign-in">Войти</button>
+        </div>
+      </div>
+    </div>
 
     <script src="assets/js/main.js"></script>
   </body>
