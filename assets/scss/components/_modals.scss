@@ -13,8 +13,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 10px;
-
     flex-direction: column;
   }
 
@@ -55,13 +53,50 @@
     padding-bottom: 6px;
   }
 
-  &__label {
+  &__text {
     @include font_config(normal, 400, $font-size-16, 18.96px);
+  }
+
+  &__label {
     align-self: flex-start;
 
     display: block;
     position: relative;
     cursor: pointer;
     font-size: 22px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__remember {
+    display: none;
+
+    &:checked {
+      & + .modal__checkbox {
+        &:after {
+          background: url(/assets/img/Vector.svg) no-repeat;
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    display: block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    margin: 0 8px 0 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+    }
   }
 }
