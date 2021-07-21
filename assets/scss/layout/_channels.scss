@@ -1,0 +1,84 @@
+.channels {
+  margin: 27px 0 72px 0;
+
+  &__container {
+    max-height: 696px;
+    display: block;
+    // overflow-y: scroll;
+    overflow: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: $color-gray-second;
+    border-radius: 2px;
+
+    &-thumb {
+      background-color: $scroll-bar-color;
+      border: 2px solid $color-gray-second;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: $color-gray;
+      }
+    }
+  }
+}
+
+.channel {
+  @include font_config(normal, 400, 16px, 18.96px);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 162px;
+  margin-bottom: 16px;
+  background-color: $color-gray-second;
+  border-radius: 8px;
+  padding: 21px 0 19px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__img {
+    height: 100%;
+    max-height: 80px;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include font_config(normal, 500, 20px, 23.7px);
+    padding-bottom: 11px;
+  }
+
+  &__broadcast {
+    @include font_config(normal, 400, 16px, 18.96px);
+    display: flex;
+    padding: 6px 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__time {
+    padding-right: 16px;
+  }
+
+  &__active {
+    color: $color-red;
+  }
+}
