@@ -526,10 +526,6 @@ a {
   top: 50%;
   max-width: 304px;
   min-height: 10rem;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
