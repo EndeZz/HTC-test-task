@@ -1,19 +1,24 @@
 .modal {
-  position: fixed;
-  z-index: $z-fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $color-gray-opacity;
-  // display: none;
+  &__overlay {
+    position: fixed;
+    z-index: $z-fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-gray-opacity;
+    cursor: pointer;
+  }
 
   &__body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    position: fixed;
+    z-index: $z-fixed;
+    left: 50%;
+    top: 50%;
+    max-width: 304px;
+    min-height: 10rem;
+    transition: transform 1s;
+    transform: translate(-50%, -50%);
   }
 
   &__content {
