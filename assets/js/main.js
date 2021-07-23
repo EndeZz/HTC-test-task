@@ -30,8 +30,16 @@ window.onload = function () {
     hideModal(e);
   };
 
+  const hideOverlayByKeydown = (e) => {
+    e = e || window.event;
+    if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
+      hideOverlay(e);
+    }
+  };
+
   buttonOpenSignIn.addEventListener('click', showOverlay);
   overlay.addEventListener('click', hideOverlay);
+  document.addEventListener('keydown', hideOverlayByKeydown);
 
   // Tabs toggle
   const buttonMovies = document.querySelector('.button__movies');
