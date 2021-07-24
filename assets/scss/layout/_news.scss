@@ -23,13 +23,19 @@
 
   &__img {
     position: relative;
-    height: 370px;
+    // height: 370px;
+    max-height: 370px;
   }
 
   &__cards_img,
   &__content {
     border-radius: 8px;
     object-fit: contain;
+    height: 370px;
+    max-width: 100%;
+    min-width: 143px;
+    height: auto;
+    width: auto\9; /* для ie8 */
   }
 
   &__content {
