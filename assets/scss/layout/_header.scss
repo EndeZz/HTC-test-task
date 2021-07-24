@@ -36,4 +36,29 @@
     line-height: 19px;
     width: 320px;
   }
+
+  &__auth {
+    width: 180px;
+    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__user-name {
+    @include font_config(normal, 400, $font-size-16, 19px);
+    font-family: $font;
+    // padding: 6px 16px 6px 0;
+    padding: 6px 0;
+    margin-right: 16px;
+    border: 0;
+    outline: none;
+    line-height: 19px;
+    width: 60%;
+    text-align: end;
+
+    &:hover {
+      border-bottom: 1px solid $color-gray;
+      border-top: 1px solid $color-light;
+    }
+  }
 }
