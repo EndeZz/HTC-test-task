@@ -4,7 +4,6 @@
   cursor: pointer;
   outline: none;
   position: relative;
-  font-family: $font;
   transition: background-color 0.2s ease-in-out;
   @include font_config(normal, 500, 28px, 33px);
 
@@ -30,7 +29,6 @@
 
 .nav__button {
   @include font_config(normal, 500, $font-size-16, 19px);
-  font-family: $font;
   color: $color-red;
 
   &:hover {
