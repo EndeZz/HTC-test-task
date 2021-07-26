@@ -1,1 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+/* rubik-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/rubik-v14-latin_cyrillic-regular.woff2') format('woff2'),
+    url('../fonts/rubik-v14-latin_cyrillic-regular.woff') format('woff');
+}
+/* rubik-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''), url('../fonts/rubik-v14-latin_cyrillic-500.woff2') format('woff2'),
+    url('../fonts/rubik-v14-latin_cyrillic-500.woff') format('woff');
+}
