@@ -1,8 +1,8 @@
 window.onload = function () {
   // Modal
-  const buttonOpenSignIn = document.getElementById('btn_open-sign-in');
-  const modal = document.getElementById('modal');
-  const overlay = document.getElementById('overlay');
+  const buttonOpenSignIn = document.querySelector('#btn_open-sign-in');
+  const modal = document.querySelector('#modal');
+  const overlay = document.querySelector('#overlay');
   const body = document.querySelector('body');
 
   const showModal = (e) => {
@@ -25,7 +25,7 @@ window.onload = function () {
     e.preventDefault();
     e.stopPropagation();
     overlay.classList.add('hidden');
-    body.style.overflow = 'visible';
+    body.style.overflowY = 'visible';
     hideModal(e);
   };
 
@@ -41,8 +41,8 @@ window.onload = function () {
   document.addEventListener('keydown', hideOverlayByKeydown);
 
   // Tabs toggle
-  const buttonTabs = document.querySelectorAll('.button__tabs');
-  const tabsContent = document.querySelectorAll('.tabs__content');
+  const buttonTabs = document.querySelectorAll('.js-tabs');
+  const tabsContent = document.querySelectorAll('.js-tabs-content');
 
   buttonTabs.forEach((tab, e) => {
     tabToggle(tab, e);
@@ -59,23 +59,22 @@ window.onload = function () {
 
   // Login form with localStorage
 
-  const form = document.getElementById('form');
+  const form = document.querySelector('#form');
   const userName = form.querySelector('#user-name');
   const userPass = form.querySelector('#user-password');
-  const errorField = form.querySelector('.errorField');
-  const userAuth = document.getElementById('user-auth');
-  const buttonSignOut = document.getElementById('btn_sign-out');
-  const checkbox = document.getElementById('auth-remember');
+  const errorField = form.querySelector('.modal__error');
+  const checkbox = form.querySelector('#auth-remember');
+  const userAuth = document.querySelector('#user-auth');
+  const buttonSignOut = document.querySelector('#btn_sign-out');
 
-  /*
-  Прошу прощения за приведенный ниже код, 
-  но по другому без данного "костыля" не работает
-  */
+  const signOut = () => {
+    sessionStorage.setItem('reloaded', false);
+    window.localStorage.clear();
+    window.location.reload();
+  };
 
-  function load() {
+  (function () {
     checkbox.checked = localStorage.getItem('checkbox') === 'true' ? true : false;
-    // console.log('Checkbox прожат:', checkbox.checked);
-    // console.log('Состояние:', sessionStorage.getItem('reloaded'));
 
     if (checkbox.checked && sessionStorage.getItem('reloaded') === 'true') {
       buttonOpenSignIn.classList.add('hidden');
@@ -84,34 +83,30 @@ window.onload = function () {
       userAuth.value = localStorage.getItem('user');
     }
     buttonSignOut.addEventListener('click', signOut);
-  }
-
-  function signOut() {
-    sessionStorage.setItem('reloaded', false);
-    window.localStorage.clear();
-    window.location.reload();
-  }
-
-  load();
-  // (function fgf{})()
+  })();
 
   const submitForm = (e) => {
     const isName = userName.value;
     const isPass = userPass.value;
     e.preventDefault();
 
-    if (isName.length >= 3 && isPass.length >= 3) {
+    if (
+      isName.trim() !== null &&
+      isPass.trim() !== null &&
+      isName.trim() !== '' &&
+      isPass.trim() !== ''
+    ) {
       sessionStorage.setItem('reloaded', true);
-      localStorage.setItem('user', isName);
+      localStorage.setItem('user', isName.replace(/\s+/g, ' ').trim());
       localStorage.setItem('checkbox', checkbox.checked);
       hideOverlay(e);
       buttonOpenSignIn.classList.add('hidden');
       buttonSignOut.classList.remove('hidden');
       userAuth.classList.remove('hidden');
-      // load();
       userAuth.value = localStorage.getItem('user');
     } else {
-      errorField.textContent = 'Неправильно введенные данные';
+      errorField.classList.remove('hidden');
+      errorField.textContent = 'Неправильно введены данные. Попробуйте снова.';
     }
   };
 

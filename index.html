@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,38 +12,39 @@
     <header class="header">
       <nav class="nav container">
         <div class="nav__logo">
-          <img class="nav__img" src="assets/img/logotypes/sign.svg" alt="Логотип Видеосервис" />
-          <h1 class="nav__title">Видеосервис</h1>
+          <a href="#" class="nav__img">
+            <img src="assets/img/logotypes/logo.svg" alt="Логотип Видеосервис" />
+          </a>
         </div>
 
         <div class="nav__search">
-          <input type="text" class="nav__input" placeholder="Поиск..." />
+          <input type="text" class="nav__input" placeholder="Поиск..." maxlength="36" />
           <button class="button nav__button">Найти</button>
         </div>
 
         <div class="nav__auth">
-          <input type="text" class="nav__user-name hidden" id="user-auth" maxlength="15" />
+          <input type="text" class="nav__user-name hidden" id="user-auth" />
           <button class="button nav__button hidden" id="btn_sign-out">Выйти</button>
-          <button class="button nav__sign-in" id="btn_open-sign-in">Войти</button>
+          <button class="button button__sign-in" id="btn_open-sign-in">Войти</button>
         </div>
       </nav>
     </header>
 
     <main class="main">
       <section class="tabs container">
-        <button class="button button__tabs button__movies button__tabs_active">Фильмы</button>
-        <button class="button button__tabs button__tv">Телеканалы</button>
+        <button class="button button__tabs js-tabs button__tabs_active">Фильмы</button>
+        <button class="button button__tabs js-tabs">Телеканалы</button>
       </section>
 
-      <article class="tabs__content">
-        <section class="news container">
-          <h2 class="title"><img src="" class="d" /> Новинки</h2>
-          <div class="news__list">
-            <div class="news__card">
-              <div class="news__img">
-                <img src="assets/img/cards/pic-1.png" class="news__cards_img" />
+      <article class="container js-tabs-content">
+        <section class="news">
+          <h2 class="title"><img src="assets/img/emoji/fire.png" /> Новинки</h2>
+          <ul class="news__list">
+            <li class="movie-card">
+              <div class="movie-card__img">
+                <img src="assets/img/cards/pic-1.png" class="movie-card__img-pic" />
 
-                <p class="news__content">
+                <span class="movie-card__content">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, architecto
                   quia delectus odit excepturi rerum repellendus non pariatur veritatis voluptatem
                   dolore ex eos ipsum modi et a temporibus voluptas sint. Lorem ipsum dolor sit amet
@@ -53,80 +54,80 @@
                   consectetur adipisicing elit. Eveniet officiis voluptate voluptatibus laborum
                   corrupti sed esse fugit, enim mollitia amet! Accusantium, facere. Laudantium
                   accusamus ea vel eos sequi hic iste.
-                </p>
+                </span>
               </div>
 
-              <h3 class="news__name">Мульт в кино. Выпуск №103. Некогда грустить!</h3>
-            </div>
+              <h3 class="movie-card__name">Мульт в кино. Выпуск №103. Некогда грустить!</h3>
+            </li>
 
-            <div class="news__card">
-              <div class="news__img">
-                <img src="assets/img/cards/pic-2.png" class="news__cards_img" />
-                <p class="news__content">
+            <li class="movie-card">
+              <div class="movie-card__img">
+                <img src="assets/img/cards/pic-2.png" class="movie-card__img-pic" />
+                <span class="movie-card__content">
                   В детстве юный наследник огромного состояния Брюс Уэйн оказался свидетелем убийства
                   своих родителей, и тогда он решил бороться с преступностью. Спустя годы он
                   отправляется в путешествие по миру, чтобы найти способ восстановить справедливость.
                   Обучение у мудрого наставника боевым искусствам дает ему силу и смелость.
                   Вернувшись в родной город, Уэйн становится Бэтменом и ведет борьбу со злом.
-                </p>
+                </span>
               </div>
 
-              <h3 class="news__name">Новый Бэтмен</h3>
-            </div>
+              <h3 class="movie-card__name">Новый Бэтмен</h3>
+            </li>
 
-            <div class="news__card">
-              <div class="news__img">
-                <img src="assets/img/cards/pic-3.png" class="news__cards_img" />
-                <p class="news__content">
+            <li class="movie-card">
+              <div class="movie-card__img">
+                <img src="assets/img/cards/pic-3.png" class="movie-card__img-pic" />
+                <span class="movie-card__content">
                   Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате
                   его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются
                   найти свое место в стремительно меняющемся мире киноиндустрии.
-                </p>
+                </span>
               </div>
 
-              <h3 class="news__name">Однажды... в Голливуде</h3>
-            </div>
+              <h3 class="movie-card__name">Однажды... в Голливуде</h3>
+            </li>
 
-            <div class="news__card">
-              <div class="news__img">
-                <img src="assets/img/cards/pic-4.png" class="news__cards_img" />
-                <p class="news__content">Осуждаю</p>
+            <li class="movie-card">
+              <div class="movie-card__img">
+                <img src="assets/img/cards/pic-4.png" class="movie-card__img-pic" />
+                <span class="movie-card__content">Осуждаю</span>
               </div>
 
-              <h3 class="news__name">Стриптизёрши</h3>
-            </div>
-          </div>
+              <h3 class="movie-card__name">Стриптизёрши</h3>
+            </li>
+          </ul>
         </section>
 
-        <section class="genre container">
+        <section class="genre">
           <h2 class="title">Жанры</h2>
-          <div class="genre__list">
-            <div class="genre__item">
-              <div class="genre__emoji">&#128516;</div>
+          <ul class="genre__list">
+            <li class="genre__item">
+              <img src="assets/img/emoji/comedy.png" class="genre__emoji" />
               <h3 class="genre__name">Комедии</h3>
-            </div>
+            </li>
 
-            <div class="genre__item">
-              <div class="genre__emoji">&#128557;</div>
+            <li class="genre__item">
+              <img src="assets/img/emoji/drama.png" class="genre__emoji" />
               <h3 class="genre__name">Драмы</h3>
-            </div>
+            </li>
 
-            <div class="genre__item">
-              <div class="genre__emoji">&#128125;</div>
+            <li class="genre__item">
+              <img src="assets/img/emoji/fantastic.png" class="genre__emoji" />
               <h3 class="genre__name">Фантастика</h3>
-            </div>
+            </li>
 
-            <div class="genre__item">
-              <div class="genre__emoji">&#128123;</div>
+            <li class="genre__item">
+              <img src="assets/img/emoji/horror.png" class="genre__emoji" />
               <h3 class="genre__name">Ужасы</h3>
-            </div>
-          </div>
+            </li>
+          </ul>
         </section>
       </article>
 
-      <article class="tabs__content hidden">
+      <article class="container js-tabs-content hidden">
         <section class="channels">
-          <div class="channels__container container">
+          <div class="channels__container">
             <div class="channel">
               <div class="channel__logo">
                 <img src="assets/img/channels/1st.svg" class="channel__img" />
@@ -136,19 +137,19 @@
                 <h2 class="channel__title">Первый канал</h2>
 
                 <ul class="channel__schedule">
-                  <li class="channel__broadcast channel__active">
+                  <li class="channel__broadcast channel__broadcast_active">
                     <span class="channel__time">13:00</span>
-                    <p class="channle__description">Новости (с субтитрами)</p>
+                    Новости (с субтитрами)
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">14:00</span>
-                    <p class="channle__description">Давай поженимся</p>
+                    Давай поженимся
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">15:00</span>
-                    <p class="channle__description">Другие новости</p>
+                    Другие новости
                   </li>
                 </ul>
               </div>
@@ -162,19 +163,19 @@
                 <h2 class="channel__title">2x2</h2>
 
                 <ul class="channel__schedule">
-                  <li class="channel__broadcast channel__active">
+                  <li class="channel__broadcast channel__broadcast_active">
                     <span class="channel__time">13:00</span>
-                    <p class="channle__description">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+                    МУЛЬТ ТВ. Сезон 4, 7 серия
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">14:00</span>
-                    <p class="channle__description">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
+                    ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">15:00</span>
-                    <p class="channle__description">БУРДАШЕВ. Сезон 1, 20 серия</p>
+                    БУРДАШЕВ. Сезон 1, 20 серия
                   </li>
                 </ul>
               </div>
@@ -188,21 +189,20 @@
                 <h2 class="channel__title">РБК</h2>
 
                 <ul class="channel__schedule">
-                  <li class="channel__broadcast channel__active">
+                  <li class="channel__broadcast channel__broadcast_active">
                     <span class="channel__time">13:00</span>
-                    <p class="channle__description">
-                      ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС
-                    </p>
+
+                    ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">14:00</span>
-                    <p class="channle__description">ДЕНЬ. Главные темы</p>
+                    ДЕНЬ. Главные темы
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">15:00</span>
-                    <p class="channle__description">Главные новости</p>
+                    Главные новости
                   </li>
                 </ul>
               </div>
@@ -216,19 +216,19 @@
                 <h2 class="channel__title">AMEDIA PREMIUM</h2>
 
                 <ul class="channel__schedule">
-                  <li class="channel__broadcast channel__active">
+                  <li class="channel__broadcast channel__broadcast_active">
                     <span class="channel__time">13:00</span>
-                    <p class="channle__description">Клиент всегда мёртв</p>
+                    Клиент всегда мёртв
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">14:00</span>
-                    <p class="channle__description">Голодные игры: Сойка-пересмешница. Часть I</p>
+                    Голодные игры: Сойка-пересмешница. Часть I
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">15:00</span>
-                    <p class="channle__description">Секс в большом городе</p>
+                    Секс в большом городе
                   </li>
                 </ul>
               </div>
@@ -242,19 +242,19 @@
                 <h2 class="channel__title">AMEDIA</h2>
 
                 <ul class="channel__schedule">
-                  <li class="channel__broadcast channel__active">
+                  <li class="channel__broadcast channel__broadcast_active">
                     <span class="channel__time">13:00</span>
-                    <p class="channle__description">Новости (с субтитрами)</p>
+                    Новости (с субтитрами)
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">14:00</span>
-                    <p class="channle__description">Давай поженимся</p>
+                    Давай поженимся
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">15:00</span>
-                    <p class="channle__description">Другие новости</p>
+                    Другие новости
                   </li>
                 </ul>
               </div>
@@ -268,19 +268,19 @@
                 <h2 class="channel__title">2x2 ADULT</h2>
 
                 <ul class="channel__schedule">
-                  <li class="channel__broadcast channel__active">
+                  <li class="channel__broadcast channel__broadcast_active">
                     <span class="channel__time">13:00</span>
-                    <p class="channle__description">НАРУТО: УРАГАННЫЕ ХРОНИКИ. Сезон 1, 345 серия</p>
+                    НАРУТО: УРАГАННЫЕ ХРОНИКИ. Сезон 1, 345 серия
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">14:00</span>
-                    <p class="channle__description">СИМПСОНЫ. Сезон 23, 20 серия.</p>
+                    СИМПСОНЫ. Сезон 23, 20 серия.
                   </li>
 
                   <li class="channel__broadcast">
                     <span class="channel__time">15:00</span>
-                    <p class="channle__description">СИМПСОНЫ. Сезон 23, 21 серия.</p>
+                    СИМПСОНЫ. Сезон 23, 21 серия.
                   </li>
                 </ul>
               </div>
@@ -303,14 +303,14 @@
           </a>
         </div>
 
-        <div class="footer__content">
-          <p class="footer__address">
+        <div class="footer__contact">
+          <span class="footer__address">
             426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)
-          </p>
+          </span>
 
           <div class="footer__tel">
             <a href="tel:+73412938861" class="footer__number">+7 (3412) 93-88-61</a>
-            <span>, </span>
+            <span>,&nbsp;</span>
             <a href="tel:43-29-29" class="footer__number">43-29-29</a>
           </div>
 
@@ -319,7 +319,7 @@
       </div>
     </footer>
 
-    <div class="modal">
+    <section class="modal">
       <div class="modal__overlay hidden" id="overlay"></div>
       <div class="modal__body hidden" id="modal">
         <div class="modal__content">
@@ -327,29 +327,28 @@
           <form action="#" class="modal__form" id="form">
             <input
               type="text"
-              placeholder="Логин"
               id="user-name"
               class="modal__input input__sign-in"
-              required
+              placeholder="Логин"
             />
             <input
               type="password"
-              placeholder="Пароль"
               id="user-password"
               class="modal__input input__sign-in"
-              required
+              placeholder="Пароль"
             />
             <label for="auth-remember" class="modal__label">
               <input type="checkbox" name="Запомнить" id="auth-remember" class="modal__remember" />
               <span class="modal__checkbox"></span>
               <span class="modal__text">Запомнить</span>
             </label>
-            <div class="errorField"></div>
-            <button class="button nav__sign-in" id="submit">Войти</button>
+            <span class="modal__error hidden"></span>
+
+            <button class="button modal__auth button__sign-in" id="submit">Войти</button>
           </form>
         </div>
       </div>
-    </div>
+    </section>
 
     <script src="assets/js/main.js"></script>
   </body>

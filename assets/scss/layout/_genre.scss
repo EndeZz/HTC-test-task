@@ -1,6 +1,6 @@
 .genre {
   margin-top: 32px;
-  margin-bottom: 72px;
+  margin-bottom: 52px;
 
   &__title {
     @include font_config(normal, 500, 24px, 28px);
@@ -9,9 +9,9 @@
 
   &__list {
     display: flex;
-    // flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -20px 25px 0;
     width: 100%;
-    margin-bottom: 25px;
   }
 
   &__item {
@@ -20,18 +20,14 @@
     border-radius: 6px;
     opacity: 0.8;
     transition: 0.2s ease-in-out;
-    width: 280px;
     height: 208px;
-    margin-right: 20px;
+    min-width: 280px;
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    flex: 0 1 20px;
+    margin: 0 20px 20px 0;
 
     &:nth-child(5n + 1) {
       background: linear-gradient(127.83deg, #f2c94c 8.44%, #f29a4a 91.36%);
@@ -55,9 +51,8 @@
   }
 
   &__emoji {
-    margin-top: 32px;
+    margin-top: 25px;
     padding: 32px;
-    font-size: 48px;
   }
 
   &__name {

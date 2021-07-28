@@ -3,8 +3,6 @@
 
   &__container {
     max-height: 696px;
-    display: block;
-    // overflow-y: scroll;
     overflow: auto;
   }
 
@@ -27,15 +25,14 @@
 }
 
 .channel {
-  @include font_config(normal, 400, 16px, 18.96px);
+  line-height: 19px;
   display: flex;
   align-items: center;
-  width: 100%;
   min-height: 162px;
-  margin-bottom: 16px;
   background-color: $color-gray-second;
   border-radius: 8px;
   padding: 21px 0 19px;
+  margin: 0 8px 16px 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -65,20 +62,19 @@
   }
 
   &__broadcast {
-    @include font_config(normal, 400, 16px, 18.96px);
     display: flex;
     padding: 6px 0;
 
     &:last-child {
       padding-bottom: 0;
     }
+
+    &_active {
+      color: $color-red;
+    }
   }
 
   &__time {
-    padding-right: 16px;
-  }
-
-  &__active {
-    color: $color-red;
+    padding-right: 20px;
   }
 }
